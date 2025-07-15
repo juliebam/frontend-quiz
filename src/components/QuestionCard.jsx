@@ -2,18 +2,26 @@ import React from 'react';
 import { useState } from 'react';
 
 
-//so when you click on this button what will happen is am event handler - it will go to the data and display a random question in the category that is being clicked on
-// so first lets do the hadler here
-// and them lets create another component fo the question and the choices
-// and also we will need to make a question randomizer function
-function QuestionCard() {
+function QuestionCard({quesstions}) {
 
 
     return (
     <div>
-        <div><img src="" alt="" />
-             <h5>title</h5>
+      <div>
+          <div>
+              {/* <img src="" alt="" /> */}
+              <h5>title</h5>
+          </div>
+
+          <span>Questions x of 10</span>
+
+          <p>Question</p>
         </div>
+        <fieldset>
+          {/* to be looped through */}
+          <input type="radio" id="" value=""/>
+          <label htmlFor=""></label>
+        </fieldset>
     </div>
   );
 

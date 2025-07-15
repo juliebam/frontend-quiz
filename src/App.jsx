@@ -3,6 +3,7 @@ import data from './data/data.json';
 import PickSubjectButton from './components/PickSubjectButton.jsx'
 import iconMap from './subjectIcons';
 import { useState, useEffect } from 'react';
+import QuestionCard from './components/QuestionCard.jsx';
 
 
 
@@ -46,10 +47,17 @@ useEffect(() => {
 
 
         <div>
-           {quizzes.map((subject, i) => 
+          {quizzes.map((subject, i) => 
             <PickSubjectButton subjectTitle={subject.title} subjectIcon={iconMap[subject.icon]} handleButtonClick={handleClick} key={i} />
           )}
         </div>
+          {getQuestions.length > 0 && (
+            <QuestionCard questions={getQuestions} /> 
+          )}
+          
+
+        
+
      </div>
     </>
   )
